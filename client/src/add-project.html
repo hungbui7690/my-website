@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- GG FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body class="box-border bg-slate-950 m-0 p-0 font-body text-slate-300">
+    <!-- NAVBAR -->
+    <nav class="top-0 h-16 nav">
+      <div
+        class="flex justify-center items-center mx-auto px-4 md:px-12 max-w-7xl h-16 md: font-bold glass nav-center"
+      >
+        <span class="text-4xl"><a href="#" class="cursor-pointer">🍁</a></span>
+      </div>
+    </nav>
+
+    <!-- ADD PRODUCT FORM -->
+    <section
+      class="flex flex-col justify-center items-center mx-auto mt-8 px-4 md:px-12 max-w-7xl"
+    >
+      <h2 class="mt-0 mb-8 font-bold text-center">Add Project</h2>
+      <form action="" class="w-[90vw] max-w-4xl">
+        <div class="form-row">
+          <label for="title" class="block mb-2 text-sm tracking-wide"
+            >Title</label
+          >
+          <input
+            type="text"
+            id="title"
+            name="title"
+            class="block border-white focus:border-white bg-transparent shadow-sm p-2 border border-solid rounded-md focus:ring-white w-full sm:text-sm outline outline-none"
+          />
+        </div>
+        <div class="form-row">
+          <label for="description" class="block mb-2 text-sm tracking-wide"
+            >Description</label
+          >
+          <input
+            type="text"
+            id="description"
+            name="description"
+            class="block border-white focus:border-white bg-transparent shadow-sm p-2 border border-solid rounded-md focus:ring-white w-full sm:text-sm outline outline-none"
+          />
+        </div>
+        <div class="form-row">
+          <label for="content" class="block mb-2 text-sm tracking-wide"
+            >Content</label
+          >
+          <input
+            type="text"
+            id="content"
+            name="content"
+            class="block border-white focus:border-white bg-transparent shadow-sm p-2 border border-solid rounded-md focus:ring-white w-full sm:text-sm outline outline-none"
+          />
+        </div>
+        <div class="form-row">
+          <label for="github" class="block mb-2 text-sm tracking-wide"
+            >Github URL</label
+          >
+          <input
+            type="text"
+            id="github"
+            name="github"
+            class="block border-white focus:border-white bg-transparent shadow-sm p-2 border border-solid rounded-md focus:ring-white w-full sm:text-sm outline outline-none"
+          />
+        </div>
+        <div class="form-row">
+          <label for="url" class="block mb-2 text-sm tracking-wide">URL</label>
+          <input
+            type="text"
+            id="url"
+            name="url"
+            class="block border-white focus:border-white bg-transparent shadow-sm p-2 border border-solid rounded-md focus:ring-white w-full sm:text-sm outline outline-none"
+          />
+        </div>
+        <div class="form-row">
+          <label for="image" class="block mb-2 text-sm tracking-wide"
+            >Image</label
+          >
+          <input type="file" />
+        </div>
+
+        <!-- # TAGS -->
+        <div class="form-row">
+          <label for="tags" class="block mb-2 text-sm tracking-wide"
+            >Tags</label
+          >
+          <div class="flex flex-col items-center mx-auto w-full">
+            <div class="px-4 w-full">
+              <div class="flex flex-col items-center">
+                <div class="w-full">
+                  <div
+                    class="flex border-gray-200 bg-white my-2 p-1 border rounded"
+                  >
+                    <div class="flex flex-wrap flex-auto">
+                      <div
+                        class="flex justify-center items-center bg-teal-100 m-1 px-2 py-1 border border-teal-300 rounded-full font-medium text-teal-700"
+                      >
+                        <div
+                          class="flex-initial max-w-full font-normal text-xs leading-none"
+                        >
+                          HTML
+                        </div>
+                        <div class="flex flex-row-reverse flex-auto">
+                          <div>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="100%"
+                              height="100%"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="ml-2 rounded-full w-4 h-4 hover:text-teal-400 cursor-pointer feather feather-x"
+                            >
+                              <line x1="18" y1="6" x2="6" y2="18"></line>
+                              <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="flex items-center border-gray-200 py-1 pr-1 pl-2 border-l w-8 text-gray-300"
+                    >
+                      <button
+                        class="w-6 h-6 text-gray-600 cursor-pointer outline-none focus:outline-none"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="100%"
+                          height="100%"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="w-4 h-4 feather feather-chevron-up"
+                        >
+                          <polyline points="18 15 12 9 6 15"></polyline>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="top-100 left-0 z-40 bg-white shadow rounded w-full max-h-select overflow-y-auto"
+                >
+                  <div class="flex flex-col w-full">
+                    <div
+                      class="border-gray-100 hover:bg-teal-100 border-b rounded-t w-full cursor-pointer"
+                    >
+                      <div
+                        class="flex items-center p-2 pl-2 border-transparent hover:border-teal-100 border-l-2 w-full"
+                      >
+                        <div class="flex items-center w-full">
+                          <div class="mx-2 leading-6">Python</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="border-gray-100 hover:bg-teal-100 border-b w-full cursor-pointer"
+                    >
+                      <div
+                        class="flex items-center p-2 pl-2 border-teal-600 border-transparent border-l-2 w-full"
+                      >
+                        <div class="flex items-center w-full">
+                          <div class="mx-2 leading-6">Javascript</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- # Add Button -->
+        <button
+          class="block bg-rose-500 mt-8 p-2 rounded-md w-full font-bold text-white"
+        >
+          Add
+        </button>
+      </form>
+      <div
+        class="bg-gradient-to-r from-10% from-slate-950 via-emerald-600 to-90% to-slate-950 mt-32 mb-10 w-full h-[1px]"
+      ></div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer
+      id="contact"
+      class="flex md:flex-row md: flex-col justify-between items-center gap-12 mx-auto mb-20 px-4 md:px-12 max-w-7xl"
+    >
+      <p
+        class="border-pink-600 p-2 border border-t-0 border-r-0 border-b-0 border-l-2 border-double font-bold text-pink-600"
+      >
+        hungbui7690@gmail.com <span>📨</span>
+      </p>
+      <div class="flex gap-4 icons">
+        <img class="w-7 h-7" src="./images/github.svg" alt="github icon" />
+        <img class="w-7 h-7" src="./images/telegram.svg" alt="telegram icon" />
+        <img class="w-7 h-7" src="./images/linkedin.svg" alt="linkedin icon" />
+        <img class="w-7 h-7" src="./images/facebook.svg" alt="facebook icon" />
+        <img class="w-7 h-7" src="./images/twitter.svg" alt="twitter icon" />
+        <img
+          class="w-7 h-7"
+          src="./images/instagram.png"
+          alt="instagram icon"
+        />
+      </div>
+      <div class="flex gap-4 p-2">
+        <p>Made with 💜 <span class="font-bold">#2024</span></p>
+      </div>
+    </footer>
+  </body>
+</html>

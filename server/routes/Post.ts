@@ -8,7 +8,7 @@ import {
   getAllPosts,
   updatePost,
   deletePost,
-} from '../controller/Post'
+} from '../controller/post'
 
 router.post('/post', createPost)
 router.get('/posts', getAllPosts)
