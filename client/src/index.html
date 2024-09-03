@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html scroll-behavior: smooth;>
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,14 +14,76 @@
     <link href="./output.css" rel="stylesheet" />
   </head>
   <body class="box-border bg-slate-950 m-0 p-0 font-body text-slate-300">
+    <!-- TO TOP ICON -->
+    <span class="to-top right-5 bottom-5 fixed cursor-pointer">
+      <a href="#">
+        <svg
+          class="border-2 border-white p-2 rounded-full w-8 h-8"
+          fill="#cbd5e1"
+          version="1.1"
+          id="Capa_1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          width="800px"
+          height="800px"
+          viewBox="0 0 30.021 30.021"
+          xml:space="preserve"
+        >
+          <g>
+            <path
+              d="M29.069,22.276c-0.791,0.932-1.917,1.409-3.052,1.409c-0.913,0-1.834-0.312-2.587-0.949l-8.42-7.152l-8.42,7.151
+      c-1.683,1.43-4.208,1.225-5.639-0.459c-1.43-1.686-1.224-4.208,0.46-5.64l11.01-9.351c1.493-1.269,3.686-1.269,5.178,0
+      l11.011,9.351C30.294,18.068,30.499,20.591,29.069,22.276z"
+            />
+          </g>
+        </svg> </a
+    ></span>
+
     <section class="top h-screen">
       <!-- NAVBAR -->
       <nav class="top-0 sticky nav">
         <div
-          class="relative flex justify-center items-center mx-auto px-8 md:px-12 max-w-7xl h-16 md: glass nav-center"
+          class="relative flex justify-between items-center mx-auto px-8 md:px-12 max-w-7xl h-16 md: font-bold glass nav-center"
         >
           <!-- # Logo -->
-          <span class="text-4xl">🍁</span>
+          <span class="text-4xl"
+            ><a href="#" class="cursor-pointer">🍁</a></span
+          >
+
+          <!-- # Links -->
+          <ul
+            class="sm:flex gap-x-4 hidden bg-slate-800 px-4 py-2 rounded-full"
+          >
+            <li class="hover:text-emerald-600 cursor-pointer">
+              <a href="#skills">Skills</a>
+            </li>
+            <li class="hover:text-emerald-600 cursor-pointer">
+              <a href="#projects">Projects</a>
+            </li>
+            <li class="hover:text-emerald-600 cursor-pointer">
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+
+          <!-- # Mobile Links -->
+          <ul
+            class="top-[4rem] right-1 absolute flex-col gap-4 hidden bg-slate-950 px-4 py-2 rounded-lg transition duration-1000 ease-in-out glass mobile-links"
+          >
+            <li class="hover:text-emerald-600 cursor-pointer">
+              <a href="#skills">Skills</a>
+            </li>
+            <li class="hover:text-emerald-600 cursor-pointer">
+              <a href="#projects">Projects</a>
+            </li>
+            <li class="hover:text-emerald-600 cursor-pointer">
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+
+          <!-- # Hamburger Menu -->
+          <div class="sm:hidden cursor-pointer hover:scale-125 transform">
+            <span class="text-2xl hamburger">🌳</span>
+          </div>
         </div>
       </nav>
 
@@ -52,6 +114,11 @@
             my projects, which I like to accompany from the first idea to
             release.
           </p>
+          <button
+            class="inline-block bg-violet-900 mt-8 p-2 rounded-md w-32 text-center text-white"
+          >
+            Resume 🧾
+          </button>
         </div>
         <div class="sm:flex flex-col justify-center hidden img-container">
           <img
@@ -63,152 +130,179 @@
       </section>
     </section>
     <div
-      class="bg-gradient-to-r from-10% from-slate-950 via-pink-600 to-90% to-slate-950 mb-10 w-full h-[1px]"
+      id="skills"
+      class="bg-gradient-to-r from-10% from-slate-950 via-pink-600 to-90% to-slate-950 mt-10 mb-10 w-full h-[1px]"
     ></div>
 
-    <!-- SKILLS -->
+    <!-- TECHNOLOGIES -->
     <section class="mx-auto mb-24 px-8 md:px-12 max-w-7xl">
-      <h2 class="font-bold text-center">Skills</h2>
-      <div class="flex sm:flex-row flex-col gap-20 mb-16">
+      <h2 class="font-bold text-center">Technologies</h2>
+      <div class="flex sm:flex-row flex-col gap-x-20 gap-y-8 mb-16">
+        <h4 class="basis-1/4">OS</h4>
+        <div class="flex flex-wrap justify-start gap-8 basis-3/4">
+          <div class="skill">
+            <img
+              class="w-10 sm:w-14 object-cover"
+              src="./images/windows.svg"
+              alt="windows"
+            />
+          </div>
+          <div class="skill">
+            <img
+              class="w-10 sm:w-14 object-cover"
+              src="./images/linux.svg"
+              alt="linux"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="flex sm:flex-row flex-col gap-x-20 gap-y-8 mb-16">
         <h4 class="basis-1/4">Languages</h4>
         <div class="flex flex-wrap justify-start gap-8 basis-3/4">
           <div class="skill">
             <img
-              class="w-10 sm:w-20 object-cover"
+              class="w-10 sm:w-14 object-cover"
               src="./images/css.svg"
               alt="css"
             />
           </div>
           <div class="skill">
             <img
-              class="w-10 sm:w-20 object-cover"
+              class="w-10 sm:w-14 object-cover"
               src="./images/javascript.svg"
               alt="javascript"
             />
           </div>
           <div class="skill">
             <img
-              class="w-10 sm:w-20 object-cover"
+              class="w-10 sm:w-14 object-cover"
               src="./images/nodejs.svg"
               alt="nodejs"
             />
           </div>
           <div class="skill">
             <img
-              class="w-10 sm:w-20 object-cover"
+              class="w-10 sm:w-14 object-cover"
+              src="./images/bunjs.svg"
+              alt="bun-js"
+            />
+          </div>
+          <div class="skill">
+            <img
+              class="w-10 sm:w-14 object-cover"
+              src="./images/typescript.svg"
+              alt="typescript"
+            />
+          </div>
+          <div class="skill">
+            <img
+              class="w-10 sm:w-14 object-cover"
               src="./images/python.svg"
               alt="python"
             />
           </div>
         </div>
       </div>
-      <div class="flex sm:flex-row flex-col gap-20 mb-16">
+      <div class="flex sm:flex-row flex-col gap-x-20 gap-y-8 mb-16">
         <h4 class="basis-1/4">Extensions</h4>
         <div class="flex flex-wrap justify-start gap-8 basis-3/4">
           <div class="text-center skill">
             <img
-              class="w-10 sm:w-20 object-cover"
+              class="w-10 sm:w-14 object-cover"
               src="./images/tailwind.svg"
               alt="tailwind"
             />
           </div>
           <div class="skill">
             <img
-              class="w-10 sm:w-20 object-cover"
+              class="w-10 sm:w-14 object-cover"
               src="./images/sass.svg"
               alt="sass"
             />
           </div>
           <div class="skill">
             <img
-              class="w-10 sm:w-20 object-cover"
+              class="w-10 sm:w-14 object-cover"
               src="./images/figma.svg"
               alt="figma"
             />
           </div>
           <div class="skill">
             <img
-              class="w-10 sm:w-20 object-cover"
+              class="w-10 sm:w-14 object-cover"
               src="./images/git.svg"
               alt="git"
             />
           </div>
           <div class="skill">
             <img
-              class="w-10 sm:w-20 object-cover"
+              class="w-10 sm:w-14 object-cover"
               src="./images/github.svg"
               alt="github"
             />
           </div>
           <div class="skill">
             <img
-              class="w-10 sm:w-20 object-cover"
+              class="w-10 sm:w-14 object-cover"
               src="./images/prisma.svg"
               alt="prisma"
             />
           </div>
         </div>
       </div>
-      <div class="flex sm:flex-row flex-col gap-20 mb-16">
+      <div class="flex sm:flex-row flex-col gap-x-20 gap-y-8 mb-16">
         <h4 class="basis-1/4">Frameworks</h4>
         <div class="flex flex-wrap justify-start gap-8 basis-3/4">
           <div class="skill">
             <img
-              class="w-10 sm:w-20 object-cover"
+              class="w-10 sm:w-14 object-cover"
               src="./images/react.svg"
               alt="react"
             />
           </div>
           <div class="flex items-center skill">
             <img
-              class="w-10 sm:w-20 object-cover"
+              class="w-10 sm:w-14 object-cover"
               src="./images/express-png.png"
-              alt="react"
+              alt="express"
             />
           </div>
           <div class="skill">
             <img
-              class="w-10 sm:w-20 object-cover"
-              src="./images/bunjs.svg"
-              alt="react"
-            />
-          </div>
-          <div class="skill">
-            <img
-              class="w-10 sm:w-20 object-cover"
+              class="w-10 sm:w-14 object-cover"
               src="./images/elysia.svg"
-              alt="react"
+              alt="elysia-js"
             />
           </div>
           <div class="skill">
             <img
-              class="w-10 sm:w-20 object-cover"
+              class="w-10 sm:w-14 object-cover"
               src="./images/nextjs.svg"
               alt="nextjs"
             />
           </div>
         </div>
       </div>
-      <div class="flex sm:flex-row flex-col gap-20 mb-16">
+      <div class="flex sm:flex-row flex-col gap-x-20 gap-y-8 mb-16">
         <h4 class="basis-1/4">DevOps</h4>
         <div class="flex flex-wrap justify-start gap-8 basis-3/4">
           <div class="skill">
             <img
-              class="w-10 sm:w-20 object-cover"
+              class="w-10 sm:w-14 object-cover"
               src="./images/docker.svg"
               alt="docker"
             />
           </div>
           <div class="skill">
             <img
-              class="w-10 sm:w-20 object-cover"
+              class="w-10 sm:w-14 object-cover"
               src="./images/kubernetes.svg"
               alt="kubernetes"
             />
           </div>
           <div class="skill">
             <img
-              class="w-10 sm:w-20 object-cover"
+              class="w-10 sm:w-14 object-cover"
               src="./images/github-action.svg"
               alt="github-action"
             />
@@ -216,47 +310,47 @@
         </div>
       </div>
 
-      <div class="flex sm:flex-row flex-col gap-20 mb-16">
+      <div class="flex sm:flex-row flex-col gap-x-20 gap-y-8 mb-16">
         <h4 class="mb-4 sm:mb-4 basis-1/4">Database</h4>
         <div class="flex flex-wrap justify-start gap-8 basis-3/4">
           <div class="skill">
             <img
-              class="w-10 sm:w-20 object-cover"
+              class="w-10 sm:w-14 object-cover"
               src="./images/mongodb.svg"
               alt="mongodb"
             />
           </div>
           <div class="skill">
             <img
-              class="w-10 sm:w-20 object-cover"
+              class="w-10 sm:w-14 object-cover"
               src="./images/postgres.png"
               alt="postgres"
             />
           </div>
           <div class="skill">
             <img
-              class="w-10 sm:w-20 object-cover"
+              class="w-10 sm:w-14 object-cover"
               src="./images/mysql-png.png"
               alt="mysql"
             />
           </div>
           <div class="skill">
             <img
-              class="w-10 sm:w-20 object-cover"
+              class="w-10 sm:w-14 object-cover"
               src="./images/sqlite.svg"
               alt="sqlite"
             />
           </div>
           <div class="skill">
             <img
-              class="w-10 sm:w-20 object-cover"
+              class="w-10 sm:w-14 object-cover"
               src="./images/db2.png"
               alt="db2"
             />
           </div>
           <div class="skill">
             <img
-              class="w-10 sm:w-20 object-cover"
+              class="w-10 sm:w-14 object-cover"
               src="./images/supabase.svg"
               alt="supabase"
             />
@@ -265,219 +359,125 @@
       </div>
     </section>
     <div
-      class="bg-gradient-to-r from-10% from-slate-950 via-emerald-700 to-90% to-slate-950 mb-10 w-full h-[1px]"
+      class="bg-gradient-to-r from-10% from-slate-950 via-emerald-700 to-90% to-slate-950 mt-10 mb-10 w-full h-[1px]"
     ></div>
 
     <!-- PROJECTS -->
     <div class="mx-auto mb-24 px-8 md:px-12 max-w-7xl">
-      <h2 class="font-bold text-center">Projects</h2>
-      <section class="gap-8 grid sm:grid-cols-2 lg:grid-cols-3 projects">
-        <div class="card glass">
+      <h2 class="font-bold text-center">Featured Projects</h2>
+      <section
+        class="gap-4 grid sm:grid-cols-2 lg:grid-cols-3 px-4 p-1 2 projects"
+      >
+        <!-- # Project 1 -->
+        <div
+          class="flex flex-col gap-y-4 cursor-pointer overflow-hidden card glass group"
+        >
           <img
-            class="rounded-t-md w-full h-60 object-cover"
-            src="./images/projects/project-1.jpg"
-            alt="project 1"
-          />
-          <div class="description">
-            <h4 class="px-4">Lorem ipsum dolor sit amet.</h4>
-            <p class="px-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit...
-            </p>
-          </div>
-          <div class="mt-4 px-4 pb-8 tags">
-            <span
-              class="p-1 border border-rose-500 rounded-full font-medium text-rose-500"
-              >react</span
-            >
-            <span
-              class="border-emerald-500 p-1 border rounded-full font-medium text-emerald-500"
-              >mongodb</span
-            >
-            <span
-              class="border-yellow-500 p-1 border rounded-full font-medium text-yellow-500"
-              >react</span
-            >
-          </div>
-        </div>
-
-        <div class="card glass">
-          <img
-            class="rounded-t-md w-full h-60 object-cover"
-            src="./images/projects/project-2.jpg"
-            alt="project 2"
-          />
-          <div class="description">
-            <h4 class="px-4">Lorem ipsum dolor sit amet.</h4>
-            <p class="px-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit...
-            </p>
-          </div>
-          <div class="mt-4 px-4 pb-8 tags">
-            <span
-              class="border-violet-500 p-1 border rounded-full font-medium text-violet-500"
-              >nextjs</span
-            >
-            <span
-              class="border-orange-500 p-1 border rounded-full font-medium text-orange-500"
-              >sqlite</span
-            >
-          </div>
-        </div>
-
-        <div class="card glass">
-          <img
-            class="rounded-t-md w-full h-60 object-cover"
-            src="./images/projects/project-3.jpg"
-            alt="project 3"
-          />
-          <div class="description">
-            <h4 class="px-4">Lorem ipsum dolor sit amet.</h4>
-            <p class="px-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit...
-            </p>
-          </div>
-          <div class="mt-4 px-4 pb-8 tags">
-            <span
-              class="p-1 border border-rose-500 rounded-full font-medium text-rose-500"
-              >react</span
-            >
-            <span
-              class="border-emerald-500 p-1 border rounded-full font-medium text-emerald-500"
-              >mongodb</span
-            >
-            <span
-              class="border-pink-500 p-1 border rounded-full font-medium text-pink-500"
-              >docker</span
-            >
-          </div>
-        </div>
-        <div class="card glass">
-          <img
-            class="rounded-t-md w-full h-60 object-cover"
+            class="group-hover:scale-105 rounded-t-md w-full h-60 transform transition duration-300 object-cover"
             src="./images/projects/project-4.jpg"
             alt="project 4"
           />
           <div class="description">
-            <h4 class="px-4">Lorem ipsum dolor sit amet.</h4>
+            <h5 class="px-4 font-bold">The Next Cartoon</h5>
             <p class="px-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit...
             </p>
           </div>
-          <div class="mt-4 px-4 pb-8 tags">
+          <div class="flex gap-2 mt-4 px-4 pb-12 tags">
             <span
-              class="p-1 border border-rose-500 rounded-full font-medium text-rose-500"
+              class="border-2 px-4 p-1 border-rose-500 rounded-full font-semibold text-rose-500"
               >react</span
             >
             <span
-              class="border-emerald-500 p-1 border rounded-full font-medium text-emerald-500"
+              class="border-2 border-emerald-500 px-4 p-1 rounded-full font-semibold text-emerald-500"
               >mongodb</span
             >
             <span
-              class="border-pink-500 p-1 border rounded-full font-medium text-pink-500"
-              >docker</span
+              class="border-2 border-yellow-500 px-4 p-1 rounded-full font-semibold text-yellow-500"
+              >react</span
             >
           </div>
         </div>
 
-        <div class="card glass">
+        <!-- # Project 2 -->
+        <div
+          class="flex flex-col gap-y-4 cursor-pointer overflow-hidden card glass group"
+        >
           <img
-            class="rounded-t-md w-full h-60 object-cover"
+            class="group-hover:scale-105 rounded-t-md w-full h-60 transform transition duration-300 object-cover"
             src="./images/projects/project-5.jpg"
             alt="project 5"
           />
           <div class="description">
-            <h4 class="px-4">Lorem ipsum dolor sit amet.</h4>
+            <h5 class="px-4 font-bold">Please Tell Me Why</h5>
             <p class="px-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit...
             </p>
           </div>
-          <div class="mt-4 px-4 pb-8 tags">
+          <div class="flex gap-2 mt-4 px-4 pb-12 tags">
             <span
-              class="p-1 border border-rose-500 rounded-full font-medium text-rose-500"
+              class="border-2 px-4 p-1 border-rose-500 rounded-full font-semibold text-rose-500"
               >react</span
             >
             <span
-              class="border-emerald-500 p-1 border rounded-full font-medium text-emerald-500"
+              class="border-2 border-emerald-500 px-4 p-1 rounded-full font-semibold text-emerald-500"
               >mongodb</span
             >
             <span
-              class="border-pink-500 p-1 border rounded-full font-medium text-pink-500"
-              >docker</span
+              class="border-2 border-yellow-500 px-4 p-1 rounded-full font-semibold text-yellow-500"
+              >react</span
             >
           </div>
         </div>
 
-        <div class="card glass">
+        <!-- # Project 3 -->
+        <div
+          class="flex flex-col gap-y-4 cursor-pointer overflow-hidden card glass group"
+        >
           <img
-            class="rounded-t-md w-full h-60 object-cover"
+            class="group-hover:scale-105 rounded-t-md w-full h-60 transform transition duration-300 object-cover"
             src="./images/projects/project-6.jpg"
             alt="project 6"
           />
           <div class="description">
-            <h4 class="px-4">Lorem ipsum dolor sit amet.</h4>
+            <h5 class="px-4 font-bold">The Black Frontier</h5>
             <p class="px-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit...
             </p>
           </div>
-          <div class="mt-4 px-4 pb-8 tags">
+          <div class="flex gap-2 mt-4 px-4 pb-12 tags">
             <span
-              class="p-1 border border-rose-500 rounded-full font-medium text-rose-500"
+              class="border-2 px-4 p-1 border-rose-500 rounded-full font-semibold text-rose-500"
               >react</span
             >
             <span
-              class="border-emerald-500 p-1 border rounded-full font-medium text-emerald-500"
+              class="border-2 border-emerald-500 px-4 p-1 rounded-full font-semibold text-emerald-500"
               >mongodb</span
             >
             <span
-              class="border-pink-500 p-1 border rounded-full font-medium text-pink-500"
-              >docker</span
-            >
-          </div>
-        </div>
-
-        <div class="card glass">
-          <img
-            class="rounded-t-md w-full h-60 object-cover"
-            src="./images/projects/project-7.jpg"
-            alt="project 7"
-          />
-          <div class="description">
-            <h4 class="px-4">Lorem ipsum dolor sit amet.</h4>
-            <p class="px-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit...
-            </p>
-          </div>
-          <div class="mt-4 px-4 pb-8 tags">
-            <span
-              class="p-1 border border-rose-500 rounded-full font-medium text-rose-500"
+              class="border-2 border-yellow-500 px-4 p-1 rounded-full font-semibold text-yellow-500"
               >react</span
-            >
-            <span
-              class="border-emerald-500 p-1 border rounded-full font-medium text-emerald-500"
-              >mongodb</span
-            >
-            <span
-              class="border-pink-500 p-1 border rounded-full font-medium text-pink-500"
-              >docker</span
             >
           </div>
         </div>
       </section>
     </div>
     <div
-      class="bg-gradient-to-r from-10% from-slate-950 via-orange-600 to-90% to-slate-950 mb-10 w-full h-[1px]"
+      class="bg-gradient-to-r from-10% from-slate-950 via-orange-600 to-90% to-slate-950 mt-20 mb-20 w-full h-[1px]"
     ></div>
 
     <!-- FOOTER -->
     <footer
-      class="flex md:flex-row md: flex-col justify-between items-center gap-4 mx-auto px-8 md:px-12 p-8 max-w-7xl"
+      id="contact"
+      class="flex md:flex-row md: flex-col justify-between items-center mx-auto mb-20 px-8 md:px-12 p-8 max-w-7xl 2"
     >
       <p
-        class="border-[crimson] bg-[crimson] p-2 border rounded-md font-bold text-white"
+        class="border-pink-600 p-2 border border-t-0 border-r-0 border-b-0 border-l-2 border-double font-bold text-pink-600"
       >
-        hungbui7690@gmail.com
+        hungbui7690@gmail.com <span>📨</span>
       </p>
       <div class="flex gap-4 icons">
+        <img class="w-7 h-7" src="./images/github.svg" alt="github icon" />
         <img class="w-7 h-7" src="./images/telegram.svg" alt="telegram icon" />
         <img class="w-7 h-7" src="./images/linkedin.svg" alt="linkedin icon" />
         <img class="w-7 h-7" src="./images/facebook.svg" alt="facebook icon" />
@@ -487,11 +487,12 @@
           src="./images/instagram.png"
           alt="instagram icon"
         />
-        <img class="w-7 h-7" src="./images/github.svg" alt="github icon" />
       </div>
-      <div class="flex gap-4 policy">
-        <p>Made with 💜 #2024</p>
+      <div class="flex gap-4 p-2">
+        <p>Made with 💜 <span class="font-bold">#2024</span></p>
       </div>
     </footer>
+
+    <script src="./script.js"></script>
   </body>
 </html>
