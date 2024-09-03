@@ -14,128 +14,95 @@
     <link href="./output.css" rel="stylesheet" />
   </head>
   <body class="box-border bg-slate-950 m-0 p-0 font-body text-slate-300">
-    <!-- TO TOP ICON -->
-    <span class="to-top right-5 bottom-5 fixed cursor-pointer">
-      <a href="#">
-        <svg
-          class="border-2 border-white p-2 rounded-full w-8 h-8"
-          fill="#cbd5e1"
-          version="1.1"
-          id="Capa_1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          width="800px"
-          height="800px"
-          viewBox="0 0 30.021 30.021"
-          xml:space="preserve"
-        >
-          <g>
-            <path
-              d="M29.069,22.276c-0.791,0.932-1.917,1.409-3.052,1.409c-0.913,0-1.834-0.312-2.587-0.949l-8.42-7.152l-8.42,7.151
-      c-1.683,1.43-4.208,1.225-5.639-0.459c-1.43-1.686-1.224-4.208,0.46-5.64l11.01-9.351c1.493-1.269,3.686-1.269,5.178,0
-      l11.011,9.351C30.294,18.068,30.499,20.591,29.069,22.276z"
-            />
-          </g>
-        </svg> </a
-    ></span>
-
-    <section class="top h-screen">
-      <!-- NAVBAR -->
-      <nav class="top-0 sticky nav">
-        <div
-          class="relative flex justify-between items-center mx-auto px-8 md:px-12 max-w-7xl h-16 md: font-bold glass nav-center"
-        >
-          <!-- # Logo -->
-          <span class="text-4xl"
-            ><a href="#" class="cursor-pointer">🍁</a></span
-          >
-
-          <!-- # Links -->
-          <ul
-            class="sm:flex gap-x-4 hidden bg-slate-800 px-4 py-2 rounded-full"
-          >
-            <li class="hover:text-emerald-600 cursor-pointer">
-              <a href="#skills">Skills</a>
-            </li>
-            <li class="hover:text-emerald-600 cursor-pointer">
-              <a href="#projects">Projects</a>
-            </li>
-            <li class="hover:text-emerald-600 cursor-pointer">
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
-
-          <!-- # Mobile Links -->
-          <ul
-            class="top-[4rem] right-1 absolute flex-col gap-4 hidden bg-slate-950 px-4 py-2 rounded-lg transition duration-1000 ease-in-out glass mobile-links"
-          >
-            <li class="hover:text-emerald-600 cursor-pointer">
-              <a href="#skills">Skills</a>
-            </li>
-            <li class="hover:text-emerald-600 cursor-pointer">
-              <a href="#projects">Projects</a>
-            </li>
-            <li class="hover:text-emerald-600 cursor-pointer">
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
-
-          <!-- # Hamburger Menu -->
-          <div class="sm:hidden cursor-pointer hover:scale-125 transform">
-            <span class="text-2xl hamburger">🌳</span>
-          </div>
-        </div>
-      </nav>
-
-      <!-- HERO -->
-      <section
-        class="flex justify-between mx-auto px-8 md:px-12 max-w-7xl hero"
+    <!-- NAVBAR -->
+    <nav class="top-0 z-10 sticky h-16 nav">
+      <div
+        class="relative flex justify-between items-center mx-auto px-4 md:px-12 max-w-7xl h-16 md: font-bold glass nav-center"
       >
-        <div
-          class="flex flex-col justify-center sm:basis-full basis-3/4 description"
+        <!-- # Logo -->
+        <span class="text-4xl"><a href="#" class="cursor-pointer">🍁</a></span>
+
+        <!-- # Links -->
+        <ul class="sm:flex gap-x-4 hidden bg-slate-800 px-4 py-2 rounded-full">
+          <li class="hover:text-emerald-600 cursor-pointer">
+            <a href="#skills">Skills</a>
+          </li>
+          <li class="hover:text-emerald-600 cursor-pointer">
+            <a href="#projects">Projects</a>
+          </li>
+          <li class="hover:text-emerald-600 cursor-pointer">
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+
+        <!-- # Mobile Links -->
+        <ul
+          class="top-[4rem] right-1 absolute flex-col gap-4 hidden bg-slate-950 px-4 py-2 rounded-lg transition duration-1000 ease-in-out glass mobile-links"
         >
-          <p class="font-bold text-violet-700 uppercase">Hello,</p>
-          <h1 class="font-bold">I'm Hung Bui</h1>
-          <p>
-            I'm a
-            <span class="text-green-500">self-taught</span> web developer based
-            in Colorado, US.
-          </p>
-          <p>
-            With over <span class="text-pink-600 highlight">10 years</span> of
-            experience in designing new features from ideation to production,
-            implementation of wireframes and design flows into high performance
-            software applications. I take into consideration the
-            <span class="text-violet-500 highlight">user experience</span>
-            while writing
-            <span class="text-orange-500 highlight">reusable</span> and
-            <span class="text-yellow-400 highlight">efficient</span> code. I
-            passionately combine good design, technology, and innovation in all
-            my projects, which I like to accompany from the first idea to
-            release.
-          </p>
-          <button
-            class="inline-block bg-violet-900 mt-8 p-2 rounded-md w-32 text-center text-white"
-          >
-            Resume 🧾
-          </button>
+          <li class="hover:text-emerald-600 cursor-pointer">
+            <a href="#skills">Skills</a>
+          </li>
+          <li class="hover:text-emerald-600 cursor-pointer">
+            <a href="#projects">Projects</a>
+          </li>
+          <li class="hover:text-emerald-600 cursor-pointer">
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+
+        <!-- # Hamburger Menu -->
+        <div class="sm:hidden cursor-pointer hover:scale-125 transform">
+          <span class="text-2xl hamburger">🌳</span>
         </div>
-        <div class="sm:flex flex-col justify-center hidden img-container">
-          <img
-            class="w-96 object-cover"
-            src="./images/cartoon.png"
-            alt="cartoon"
-          />
-        </div>
-      </section>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="flex justify-between mx-auto px-4 md:px-12 max-w-7xl hero">
+      <div
+        class="flex flex-col justify-center sm:basis-full basis-3/4 description"
+      >
+        <p class="font-bold text-violet-700 uppercase">Hello,</p>
+        <h1 class="font-bold">I'm Hung Bui</h1>
+        <p>
+          I'm a
+          <span class="text-green-500">self-taught</span> web developer based in
+          Colorado, US.
+        </p>
+        <p>
+          With over <span class="text-pink-600 highlight">10 years</span> of
+          experience in designing new features from ideation to production,
+          implementation of wireframes and design flows into high performance
+          software applications. I take into consideration the
+          <span class="text-violet-500 highlight">user experience</span>
+          while writing
+          <span class="text-orange-500 highlight">reusable</span> and
+          <span class="text-yellow-400 highlight">efficient</span> code. I
+          passionately combine good design, technology, and innovation in all my
+          projects, which I like to accompany from the first idea to release.
+        </p>
+        <button
+          class="inline-block bg-violet-900 mt-8 p-2 rounded-md w-32 text-center text-white"
+        >
+          Resume 🧾
+        </button>
+      </div>
+      <div class="sm:flex flex-col justify-center hidden img-container">
+        <img
+          class="w-96 object-cover"
+          src="./images/cartoon.png"
+          alt="cartoon"
+        />
+      </div>
     </section>
+
     <div
       id="skills"
       class="bg-gradient-to-r from-10% from-slate-950 via-pink-600 to-90% to-slate-950 mt-10 mb-10 w-full h-[1px]"
     ></div>
 
     <!-- TECHNOLOGIES -->
-    <section class="mx-auto mb-24 px-8 md:px-12 max-w-7xl">
+    <section class="mx-auto mb-24 px-4 md:px-12 max-w-7xl">
       <h2 class="font-bold text-center">Technologies</h2>
       <div class="flex sm:flex-row flex-col gap-x-20 gap-y-8 mb-16">
         <h4 class="basis-1/4">OS</h4>
@@ -363,14 +330,12 @@
     ></div>
 
     <!-- PROJECTS -->
-    <div class="mx-auto mb-24 px-8 md:px-12 max-w-7xl">
+    <div class="mx-auto mb-24 px-4 md:px-12 max-w-7xl">
       <h2 class="font-bold text-center">Featured Projects</h2>
-      <section
-        class="gap-4 grid sm:grid-cols-2 lg:grid-cols-3 px-4 p-1 2 projects"
-      >
+      <section class="gap-4 grid sm:grid-cols-2 lg:grid-cols-3 projects">
         <!-- # Project 1 -->
         <div
-          class="flex flex-col gap-y-4 cursor-pointer overflow-hidden card glass group"
+          class="z-0 flex flex-col gap-y-4 rounded-t-md cursor-pointer overflow-hidden card glass group"
         >
           <img
             class="group-hover:scale-105 rounded-t-md w-full h-60 transform transition duration-300 object-cover"
@@ -383,7 +348,7 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit...
             </p>
           </div>
-          <div class="flex gap-2 mt-4 px-4 pb-12 tags">
+          <div class="flex flex-wrap gap-2 mt-4 px-4 pb-12 tags">
             <span
               class="border-2 px-4 p-1 border-rose-500 rounded-full font-semibold text-rose-500"
               >react</span
@@ -401,7 +366,7 @@
 
         <!-- # Project 2 -->
         <div
-          class="flex flex-col gap-y-4 cursor-pointer overflow-hidden card glass group"
+          class="z-0 flex flex-col gap-y-4 rounded-t-md cursor-pointer overflow-hidden card glass group"
         >
           <img
             class="group-hover:scale-105 rounded-t-md w-full h-60 transform transition duration-300 object-cover"
@@ -414,7 +379,7 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit...
             </p>
           </div>
-          <div class="flex gap-2 mt-4 px-4 pb-12 tags">
+          <div class="flex flex-wrap gap-2 mt-4 px-4 pb-12 tags">
             <span
               class="border-2 px-4 p-1 border-rose-500 rounded-full font-semibold text-rose-500"
               >react</span
@@ -432,7 +397,7 @@
 
         <!-- # Project 3 -->
         <div
-          class="flex flex-col gap-y-4 cursor-pointer overflow-hidden card glass group"
+          class="z-0 flex flex-col gap-y-4 rounded-t-md cursor-pointer overflow-hidden card glass group"
         >
           <img
             class="group-hover:scale-105 rounded-t-md w-full h-60 transform transition duration-300 object-cover"
@@ -445,7 +410,7 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit...
             </p>
           </div>
-          <div class="flex gap-2 mt-4 px-4 pb-12 tags">
+          <div class="flex flex-wrap gap-2 mt-4 px-4 pb-12 tags">
             <span
               class="border-2 px-4 p-1 border-rose-500 rounded-full font-semibold text-rose-500"
               >react</span
@@ -469,7 +434,7 @@
     <!-- FOOTER -->
     <footer
       id="contact"
-      class="flex md:flex-row md: flex-col justify-between items-center mx-auto mb-20 px-8 md:px-12 p-8 max-w-7xl 2"
+      class="flex md:flex-row md: flex-col justify-between items-center gap-12 mx-auto mb-20 px-4 md:px-12 max-w-7xl"
     >
       <p
         class="border-pink-600 p-2 border border-t-0 border-r-0 border-b-0 border-l-2 border-double font-bold text-pink-600"

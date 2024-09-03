@@ -619,13 +619,17 @@ h2 {
 }
 
 .glass {
-  background: rgba(255, 255, 255, 0.036);
-  box-shadow: 0 8px 32px 0 rgba(239, 239, 239, 0.153);
+  background: rgba(255, 255, 255, 0.066);
+  box-shadow: 0 0 0 0 rgba(239, 239, 239, 0.153);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.099);
+}
+
+.glass:hover {
+  border: 1px solid rgba(255, 255, 255, 0.266);
 }
 
 .hero {
@@ -648,8 +652,8 @@ h2 {
   position: sticky;
 }
 
-.bottom-5 {
-  bottom: 1.25rem;
+.bottom-20 {
+  bottom: 5rem;
 }
 
 .right-1 {
@@ -666,6 +670,18 @@ h2 {
 
 .top-\[4rem\] {
   top: 4rem;
+}
+
+.-z-10 {
+  z-index: -10;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.z-0 {
+  z-index: 0;
 }
 
 .m-0 {
@@ -753,8 +769,8 @@ h2 {
   height: 1px;
 }
 
-.h-screen {
-  height: 100vh;
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .w-10 {
@@ -835,6 +851,10 @@ h2 {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-12 {
+  gap: 3rem;
 }
 
 .gap-x-20 {
@@ -1015,6 +1035,11 @@ h2 {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .pb-12 {
