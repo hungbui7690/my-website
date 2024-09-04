@@ -1,26 +1,43 @@
 import { type Request, type Response } from 'express'
-import { Post } from '../model/Post'
+import { Post, type SchemaPost } from '../model/Post'
+import { BadRequestError } from '../errors'
+import { StatusCodes } from 'http-status-codes'
 
 export const createPost = async (req: Request, res: Response) => {
-  try {
-    const { author, title, content } = req.body
+  const { title, description, github, featured, url, tags, image } = req.body
+  if (!title || !description || !github || !tags)
+    throw new BadRequestError('Please provide all information.')
 
-    const post = new Post({ author, title, content })
-    await post.save()
+  const post = new Post<SchemaPost>({
+    title,
+    description,
+    github,
+    featured: featured || false,
+    url: url || github,
+    tags,
+    image: image || 'images/default-image.png',
+  })
+  await post.save()
 
-    res.status(201).send(post)
-  } catch (error) {
-    res.status(400).send(error)
-  }
+  res.status(StatusCodes.CREATED).json(post)
 }
 
 export const getAllPosts = async (req: Request, res: Response) => {
-  try {
-    const posts = await Post.find({})
-    res.status(200).send(posts)
-  } catch (error) {
-    res.status(500).send(error)
+  console.log('Get All Posts')
+  const posts = await Post.find({})
+  res.status(StatusCodes.OK).json(posts)
+}
+
+export const updatePost = async (req: Request, res: Response) => {
+  const { id } = req.params
+  const post = await Post.findByIdAndUpdate(id, req.body, {
+    new: true,
+    runValidators: true,
+  })
+  if (!post) {
+    res.status(StatusCodes.NOT_FOUND).json()
   }
+  res.status(StatusCodes.OK).json(post)
 }
 
 export const getSinglePost = async (req: Request, res: Response) => {
@@ -30,25 +47,9 @@ export const getSinglePost = async (req: Request, res: Response) => {
     if (!post) {
       res.status(404).send()
     }
-    res.status(200).send(post)
+    res.status(StatusCodes.OK).json(post)
   } catch (error) {
     res.status(500).send(error)
-  }
-}
-
-export const updatePost = async (req: Request, res: Response) => {
-  try {
-    const { id } = req.params
-    const post = await Post.findByIdAndUpdate(id, req.body, {
-      new: true,
-      runValidators: true,
-    })
-    if (!post) {
-      res.status(404).send()
-    }
-    res.status(200).send(post)
-  } catch (error) {
-    res.status(400).send(error)
   }
 }
 

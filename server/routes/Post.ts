@@ -1,19 +1,11 @@
 import express from 'express'
-
 const router = express.Router()
+import { createPost, getAllPosts, updatePost } from '../controller/post'
+import { uploadProductImage } from '../controller/uploadImage'
 
-import {
-  createPost,
-  getSinglePost,
-  getAllPosts,
-  updatePost,
-  deletePost,
-} from '../controller/post'
-
-router.post('/post', createPost)
-router.get('/posts', getAllPosts)
-router.get('/post/:id', getSinglePost)
-router.put('/post/:id', updatePost)
-router.delete('/post/:id', deletePost)
+router.post('/uploadImage', uploadProductImage)
+router.post('/', createPost)
+router.get('/', getAllPosts)
+router.patch('/:id', updatePost)
 
 export default router

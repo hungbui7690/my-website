@@ -1,0 +1,176 @@
+{
+  "info": {
+    "_postman_id": "c8bb928b-1d19-4d93-814e-966bd01d0875",
+    "name": "My Website",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "13813451"
+  },
+  "item": [
+    {
+      "name": "Ping",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/ping",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["ping"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\": \"admin2\",\r\n    \"password\" : \"2e7etrEp@001\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/v1/auth/register",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "v1", "auth", "register"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\": \"adminz\",\r\n    \"password\" : \"2e7etrEp@01\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/v1/auth/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "v1", "auth", "login"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "IP",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/ip",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["ip"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Post",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\":\"title1\",\r\n    \"description\":\"description1\",\r\n    \"featured\": false,\r\n    \"github\":\"github1\",\r\n    \"url\" : \"url1\",\r\n    \"tags\" : [\"react\", \"nodeJS\", \"typescript\"]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/v1/post",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "v1", "post"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Posts",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/v1/post",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "v1", "post"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Post",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\":\"title2\",\r\n    \"description\":\"description1\",\r\n    \"featured\": false,\r\n    \"github\":\"github1\",\r\n    \"url\" : \"url1\",\r\n    \"tags\" : [\"react\", \"nodeJS\", \"typescript\"]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/v1/post/66d7e54f69040bc12c9065a0",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "v1", "post", "66d7e54f69040bc12c9065a0"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Upload Post Image",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "image-upload",
+              "type": "file",
+              "src": "/C:/Users/7hanhHung/Downloads/photos.png"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/v1/post/uploadImage",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "v1", "post", "uploadImage"]
+        }
+      },
+      "response": []
+    }
+  ]
+}

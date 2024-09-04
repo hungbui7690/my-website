@@ -4,7 +4,7 @@ import mongoose from 'mongoose'
 
 export default function connectDB() {
   const mongoURI =
-    process.env.MONGODB_URI ?? 'mongodb://localhost:27017/myWebsiteBunJS'
+    process.env.MONGO_URI ?? 'mongodb://localhost:27017/MyWebsite-API-BunJS'
 
   try {
     mongoose.connect(mongoURI)

@@ -3,11 +3,11 @@ import { Schema, type InferSchemaType, model } from 'mongoose'
 interface IPost {
   title: string
   description: string
-  content: string
-  image: string
   github: string
-  url: string
+  featured?: boolean
+  url?: string
   tags: string[]
+  image?: string
   createdAt?: Date
   updatedAt?: Date
 }
@@ -22,9 +22,9 @@ const postSchema = new Schema<IPost>(
       type: String,
       required: true,
     },
-    content: {
-      type: String,
-      required: true,
+    featured: {
+      type: Boolean,
+      default: false,
     },
     github: {
       type: String,
@@ -32,11 +32,11 @@ const postSchema = new Schema<IPost>(
     },
     url: {
       type: String,
-      required: true,
+      required: false,
     },
     image: {
       type: String,
-      required: true,
+      required: false,
     },
     tags: {
       type: [],
